@@ -40,9 +40,6 @@ const Users = db.define('users', {
     get() {
       return () => this.getDataValue('salt')
     }
-  },
-  skinTypeId: {
-    type: Sequelize.INTEGER
   }
 })
 

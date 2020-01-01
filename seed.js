@@ -2,22 +2,21 @@ const {Users, Categories} = require('./models/associations')
 const {db} = require('./models/index')
 
 const seedUsers = [
-  { firstName: 'Andi', lastName: 'Plummer', skinTypeId: 1, email: 'andi@gmail.com', password: '1234'},
+  { firstName: 'Andi', lastName: 'Plummer', email: 'andi@gmail.com', password: '1234'},
+  { firstName: 'Michael', lastName: 'Powers', email: 'michael@gmail.com', password: '1234'},
 ]
 
 const seedCategories = [
-  { name: 'Vegan', icon: 'carrot' },
-  { name: 'Bowls', icon: 'bowl' },
-  { name: 'Cookies', icon: 'cookie' },
-  { name: 'Asian', icon: 'rice' },
-  { name: 'Veggies', icon: 'corn' },
-  { name: 'Pastries', icon: 'food-croissant' },
-  { name: 'Fish', icon: 'fish' },
-  { name: 'American', icon: 'food' },
-  { name: 'Burgers', icon: 'hamburger' },
-  { name: 'Dessert', icon: 'cupcake' },
-  { name: 'Drinks', icon: 'beer' },
-  { name: 'General', icon: 'silverware-variant' },
+  { name: 'Vegan', icon: 'carrot', order: 1, userId: 1 },
+  { name: 'Bowls', icon: 'bowl', order: 2, userId: 1 },
+  { name: 'Fish', icon: 'fish', order: 5, userId: 1 },
+  { name: 'Burgers', icon: 'hamburger', order: 4, userId: 1 },
+  { name: 'Dessert', icon: 'cupcake', order: 3, userId: 1 },
+  { name: 'Drinks', icon: 'beer', order: 6, userId: 1 },
+  { name: 'General', icon: 'silverware-variant', order: 7, userId: 1 },
+  { name: 'Dessert', icon: 'cupcake', order: 1, userId: 2 },
+  { name: 'Drinks', icon: 'beer', order: 2, userId: 2 },
+  { name: 'General', icon: 'silverware-variant', order: 3, userId: 2 },
 ]
 
 async function seed() {

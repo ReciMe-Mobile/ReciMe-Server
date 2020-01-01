@@ -3,10 +3,21 @@ const {db} = require('./index')
 
 const Categories = db.define('categories', {
   name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   icon: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  order: {
+    type: Sequelize.INTEGER
   }
 })
 
